@@ -9,4 +9,10 @@
     android:layout_gravity="center"
     android:textColor="@color/black"
     android:textSize="48sp"/>
+    <FrameLayout
+        android:id="@+id/frame_add"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_gravity="bottom|center_horizontal"
+        />
 </FrameLayout>
