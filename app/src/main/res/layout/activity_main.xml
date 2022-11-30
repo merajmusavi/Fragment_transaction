@@ -1,12 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
+    <Button
+        android:text="@string/rmv_frg"
+        android:id="@+id/remove"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
 <FrameLayout
+    android:layout_above="@id/remove"
     android:id="@+id/fragment_frame"
     android:layout_width="match_parent"
     android:layout_height="match_parent"/>
-</androidx.constraintlayout.widget.ConstraintLayout>
+</RelativeLayout>

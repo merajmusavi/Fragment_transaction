@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">Fragment transaction</string>
     <string name="a">A</string>
+    <string name="rmv_frg">remove fragment</string>
 </resources>
