@@ -27,6 +27,7 @@ public class MainActivity extends AppCompatActivity {
                 if (find!=null) {
                     FragmentTransaction fragmentTransaction_remove = getSupportFragmentManager().beginTransaction();
                     fragmentTransaction_remove.remove(find);
+                    fragmentTransaction_remove.addToBackStack(null);
                     fragmentTransaction_remove.commit();
                 }
             }
