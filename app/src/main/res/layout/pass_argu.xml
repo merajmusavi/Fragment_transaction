@@ -9,6 +9,7 @@
         android:layout_height="match_parent">
 
 <EditText
+    android:id="@+id/et_send_argu"
     android:layout_gravity="center_vertical|center_horizontal"
     android:hint="@string/input_data"
     android:layout_width="wrap_content"

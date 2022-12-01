@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.EditText;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -25,10 +26,15 @@ public class PassArguments extends Fragment {
         inp_data.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                EditText send_argu = getView().findViewById(R.id.et_send_argu);
+                String send = send_argu.getText().toString();
+                Bundle bundle = new Bundle();
+                bundle.putString(Fragment_Argu_Passed.ARGU_KEY,send);
+                Fragment_Argu_Passed fragment_argu_passed = new Fragment_Argu_Passed();
+                fragment_argu_passed.setArguments(bundle);
 
                 FragmentTransaction fragmentTransaction = getParentFragmentManager().beginTransaction();
-                fragmentTransaction.replace(R.id.fragment_frame,new Fragment_Argu_Passed());
+                fragmentTransaction.replace(R.id.fragment_frame,fragment_argu_passed);
                 fragmentTransaction.commit();
             }
         });
