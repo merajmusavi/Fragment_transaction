@@ -11,33 +11,27 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
-public class FragmentA extends Fragment {
+public class PassArguments extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_a,container,false);
+        return inflater.inflate(R.layout.pass_argu,container,false);
     }
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
-        Button button = getView().findViewById(R.id.gotob);
-        button.setOnClickListener(new View.OnClickListener() {
+        super.onViewCreated(view, savedInstanceState);
+        Button inp_data = view.findViewById(R.id.input_Data);
+        inp_data.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
+
                 FragmentTransaction fragmentTransaction = getParentFragmentManager().beginTransaction();
-                fragmentTransaction.replace(R.id.fragment_frame,new FragmentB());
-                fragmentTransaction.addToBackStack(null);
+                fragmentTransaction.replace(R.id.fragment_frame,new Fragment_Argu_Passed());
                 fragmentTransaction.commit();
             }
         });
-        Button button_go_to_argu = getView().findViewById(R.id.go_to_arguments);
-        button_go_to_argu.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                FragmentTransaction fragmentTransaction = getParentFragmentManager().beginTransaction();
-                fragmentTransaction.replace(R.id.fragment_frame,new PassArguments());
-                fragmentTransaction.commit();
-            }
-        });
+
     }
 }

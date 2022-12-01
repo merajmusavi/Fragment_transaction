@@ -5,4 +5,7 @@
     <string name="b">B</string>
     <string name="go_to_b">go to b</string>
     <string name="c">C</string>
+    <string name="input_data">input data</string>
+    <string name="go_to_argu">go to argu</string>
+    <string name="data">data</string>
 </resources>
